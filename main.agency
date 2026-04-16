@@ -1,0 +1,7 @@
+import { weather } from "std::weather"
+
+node main() {
+  const zipCode = "55105"
+  const results = weather(zipCode)
+  print(results)
+}
