@@ -1,0 +1,11 @@
+import { fib, searchBQ } from "./tools.js"
+def bigquery(query: string): string[] {
+  return searchBQ(query)
+}
+
+node agent() {
+  const result = llm("Use the bigquery tool to search for 'Calvin and Hobbes books'", { 
+    tools: [bigquery]
+  })
+  return result
+}
