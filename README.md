@@ -4,7 +4,7 @@ This starter template contains a simple agent with a single tool to check the we
 1. Install dependencies:
 
 ```bash
-npm install
+pnpm install
 ```
 
 2. Set the openai api key:
@@ -15,8 +15,15 @@ export OPENAI_API_KEY=your_api_key_here
 
 3. See if it works:
 
+Run it directly:
 ```bash
-npm run agency main.agency
+pnpm run agency main.agency
+```
+
+Or build and run the index.js file:
+```bash
+pnpm run build
+pnpm run start
 ```
 
 ## VS Code extension

@@ -1,0 +1,22 @@
+import { fib } from "./tools.js"
+def fibonacciNumbers(num: number): number[] {
+  """
+  Calculate the first num Fibonacci numbers in parallel.
+  """
+  const arr = range(num)
+  const results = fork(arr) as i {
+    return fib(i)
+  }
+}
+
+node agent(num:number) {
+  const result: number[] = llm("Use the fibonacciNumbers tool to calculate the first ${num} Fibonacci numbers", { 
+    tools: [fibonacciNumbers]
+  })
+  print(result)
+  return result
+}
+
+node main() {
+  return agent(10)
+}

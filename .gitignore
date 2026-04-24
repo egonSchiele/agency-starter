@@ -2,3 +2,5 @@ node_modules/
 dist/
 .*
 main.js
+lib/*.ts
+lib/*.js
