@@ -9,7 +9,7 @@ def fibonacciNumbers(num: number): number[] {
   }
 }
 
-node agent(num:number) {
+node agent(num: number) {
   const result: number[] = llm("Use the fibonacciNumbers tool to calculate the first ${num} Fibonacci numbers", { 
     tools: [fibonacciNumbers]
   })

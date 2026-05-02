@@ -1,0 +1,6 @@
+import { braveSearch } from "pkg::@agency-lang/brave-search"
+// You need to set BRAVE_API_KEY in your environment variables to run this example.
+node main() {
+  const result = braveSearch("Calvin and Hobbes")
+  print(result)
+}
