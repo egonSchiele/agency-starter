@@ -17,10 +17,13 @@ export OPENAI_API_KEY=your_api_key_here
 
 Run it directly:
 ```bash
-pnpm run agency main.agency
+npx agency lib/main.agency
+
+# or this works too
+pnpm run agency lib/main.agency
 ```
 
-Or build and run the index.js file:
+Or build and run the index.js file, which runs the agent through typescript code
 ```bash
 pnpm run build
 pnpm run start
