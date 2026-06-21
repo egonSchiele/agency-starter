@@ -1,0 +1,10 @@
+{
+  "verbose": false,
+  "observability": true,
+  "log": {
+    "logFile": "log.jsonl"
+  },
+  "typechecker": {
+    "enabled": true
+  }
+}

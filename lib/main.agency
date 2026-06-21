@@ -7,12 +7,16 @@ def fibonacciNumbers(num: number): number[] {
   const results = fork(arr) as i {
     return fib(i)
   }
+  return results
 }
 
 node agent(num: number) {
-  const result: number[] = llm("Use the fibonacciNumbers tool to calculate the first ${num} Fibonacci numbers", { 
+  const result: number[] = llm(
+    "Use the fibonacciNumbers tool to calculate the first ${num} Fibonacci numbers",
+    {
     tools: [fibonacciNumbers]
-  })
+  },
+  )
   print(result)
   return result
 }
