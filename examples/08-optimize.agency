@@ -1,0 +1,6 @@
+node main() {
+  const prompt = "What is the capital of France?"
+  const response = llm(prompt)
+  print(response)
+  return response
+}
