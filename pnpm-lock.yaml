@@ -12,8 +12,8 @@ importers:
         specifier: ^25.6.0
         version: 25.6.0
       agency-lang:
-        specifier: ^0.6.0
-        version: 0.6.0(ws@8.21.0)
+        specifier: ^0.6.1
+        version: 0.6.1(ws@8.21.0)
       typescript:
         specifier: ^6.0.2
         version: 6.0.2
@@ -234,8 +234,8 @@ packages:
   '@types/retry@0.12.0':
     resolution: {integrity: sha512-wWKOClTTiizcZhXnPY4wikVAwmdYHp8q6DmC+EJUzAMsycb7HB32Kh9RN4+0gExjmPmZSAQjgURXIGATPegAvA==}
 
-  agency-lang@0.6.0:
-    resolution: {integrity: sha512-gJSY05SIEKTWq8ZjUUz1xBflYEwlk4xt8cs49z79He11I7eEBGl3WgX2Qn7IUYSujhyKDu73yE+Q/aEBvux/NQ==}
+  agency-lang@0.6.1:
+    resolution: {integrity: sha512-kIKXmSvpLjMsiUjxM1wrZrksEJHq9BOC5YlmRQ5krUamshQlSk0xd5hiiQnB/Ijv72UWQdzjTjC8gTBo3stItw==}
     hasBin: true
 
   agent-base@7.1.4:
@@ -529,8 +529,8 @@ packages:
   vscode-languageserver-protocol@3.17.5:
     resolution: {integrity: sha512-mb1bvRJN8SVznADSGWM9u/b07H7Ecg0I3OgXDuLdn307rl/J3A9YD6/eYOssqhecL27hK1IPZAsaqh00i/Jljg==}
 
-  vscode-languageserver-protocol@3.18.0:
-    resolution: {integrity: sha512-Zdz+kJ12Iz6tc11xfZyEo501bBATHXrCjmMfnaR3pMnf1CoqZBKIynba3P+/bi9VEdrMbNtAVKYpKhbODvqy+Q==}
+  vscode-languageserver-protocol@3.18.1:
+    resolution: {integrity: sha512-RTiiVHdpxpYcJVI5sq6S5TLjQ4WDR/rBrIWru+kPXe6sGQ9PFQ3GamrTKLvPqbR4ylr1SoodhmcqbFII0WXVuw==}
 
   vscode-languageserver-textdocument@1.0.12:
     resolution: {integrity: sha512-cxWNPesCnQCcMPeenjKKsOCKQZ/L6Tv19DTRIGuLWe32lyzWhihGVJ/rcckZXJxfdKCFvRLS3fpBIsV/ZGX4zA==}
@@ -712,7 +712,7 @@ snapshots:
 
   '@types/retry@0.12.0': {}
 
-  agency-lang@0.6.0(ws@8.21.0):
+  agency-lang@0.6.1(ws@8.21.0):
     dependencies:
       chokidar: 4.0.3
       cli-highlight: 2.1.11
@@ -727,7 +727,7 @@ snapshots:
       tarsec: 0.4.7
       typestache: 0.5.0
       vscode-languageserver: 9.0.1
-      vscode-languageserver-protocol: 3.18.0
+      vscode-languageserver-protocol: 3.18.1
       vscode-languageserver-textdocument: 1.0.12
       zod: 4.4.3
     transitivePeerDependencies:
@@ -1049,7 +1049,7 @@ snapshots:
       vscode-jsonrpc: 8.2.0
       vscode-languageserver-types: 3.17.5
 
-  vscode-languageserver-protocol@3.18.0:
+  vscode-languageserver-protocol@3.18.1:
     dependencies:
       vscode-jsonrpc: 9.0.0
       vscode-languageserver-types: 3.18.0

@@ -1,0 +1,4 @@
+node main() {
+  const result = llm("What is the capital of India?")
+  print(result)
+}
