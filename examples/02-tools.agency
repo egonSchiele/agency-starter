@@ -1,4 +1,9 @@
 def getCapital(country: string): string {
+  """
+  Get the capital of a country. Currently only supports India.
+
+  @param country - The name of the country to get the capital for.
+  """
   if (country == "India") {
     return "New Delhi"
   } else {

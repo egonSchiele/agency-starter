@@ -11,7 +11,8 @@ node main() {
   } with (data) {
     print("Got an interrupt:")
     print(data.message)
-    const approval = input("Approve? (y/n)")
+    print(JSON.stringify(data.data, null, 2))
+    const approval = input("Approve? (y/n) ")
     if (approval.toLowerCase() === "y") {
       return approve()
     } else {

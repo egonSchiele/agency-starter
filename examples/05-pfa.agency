@@ -1,0 +1,17 @@
+import { cwd } from "std::system"
+import { systemMessage } from "std::thread"
+
+node main() {
+  const prompt = "You are a coding agent. Help the user with their task."
+  systemMessage(prompt)
+  const message = input("> ")
+  handle {
+    const result = llm(
+      message,
+      {
+      tools: [read.partial(dir: cwd()), write.partial(dir: cwd())]
+    },
+    )
+  } with approve
+  print(result)
+}

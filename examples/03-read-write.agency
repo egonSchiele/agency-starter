@@ -1,0 +1,12 @@
+import { systemMessage } from "std::thread"
+
+// This code will cause an interrupt error
+node main() {
+  const prompt = "You are a coding agent. Help the user with their task."
+  systemMessage(prompt)
+  const message = input("> ")
+  const result = llm(message, {
+    tools: [read, write]
+  })
+  print(result)
+}

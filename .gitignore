@@ -5,3 +5,4 @@ main.js
 lib/*.ts
 lib/*.js
 examples/*.js
+log.jsonl

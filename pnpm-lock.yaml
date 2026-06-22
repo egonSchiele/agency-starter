@@ -12,8 +12,8 @@ importers:
         specifier: ^25.6.0
         version: 25.6.0
       agency-lang:
-        specifier: ^0.6.1
-        version: 0.6.1(ws@8.21.0)
+        specifier: ^0.6.2
+        version: 0.6.2(ws@8.21.0)
       typescript:
         specifier: ^6.0.2
         version: 6.0.2
@@ -234,8 +234,8 @@ packages:
   '@types/retry@0.12.0':
     resolution: {integrity: sha512-wWKOClTTiizcZhXnPY4wikVAwmdYHp8q6DmC+EJUzAMsycb7HB32Kh9RN4+0gExjmPmZSAQjgURXIGATPegAvA==}
 
-  agency-lang@0.6.1:
-    resolution: {integrity: sha512-kIKXmSvpLjMsiUjxM1wrZrksEJHq9BOC5YlmRQ5krUamshQlSk0xd5hiiQnB/Ijv72UWQdzjTjC8gTBo3stItw==}
+  agency-lang@0.6.2:
+    resolution: {integrity: sha512-zPMya7Pt7P1I0sHgVeYkD4APZvuiFF4wCERGnItgVKLVoRWEWsXJtfQV1GGSU86Ultise2GSXpXOUhq13pa70Q==}
     hasBin: true
 
   agent-base@7.1.4:
@@ -712,7 +712,7 @@ snapshots:
 
   '@types/retry@0.12.0': {}
 
-  agency-lang@0.6.1(ws@8.21.0):
+  agency-lang@0.6.2(ws@8.21.0):
     dependencies:
       chokidar: 4.0.3
       cli-highlight: 2.1.11

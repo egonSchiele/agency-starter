@@ -1,0 +1,60 @@
+import { cwd } from "std::system"
+import { systemMessage } from "std::thread"
+import { search } from "std::wikipedia"
+
+def codingAgent(userMessage: string): string {
+  """
+  Use this agent for coding related tasks. It has access to read and write tools that are scoped to the current working directory.
+  """
+  const prompt = "You are a coding agent. Help the user with their task. If the user asks you to read or write files, use the read and write tools provided. These tools are scoped to the current working directory."
+  systemMessage(prompt)
+  handle {
+    const result = llm(
+      userMessage,
+      {
+      tools: [read.partial(dir: cwd()), write.partial(dir: cwd())]
+    },
+    )
+  } with approve
+  return result
+}
+
+def wikipediaAgent(query: string): string {
+  """
+  Use this agent for answering general knowledge questions using wikipedia. It has access to a search tool that can query wikipedia.
+  """
+  const prompt = "You are a wikipedia agent. Answer the user's query using wikipedia. If the user asks you to search for information, use the search tool provided."
+  systemMessage(prompt)
+  handle {
+    const result = llm(query, {
+      tools: [search]
+    })
+  } with approve
+  return result
+}
+
+callback("onToolCallStart") as data {
+  print(color.yellow("⏺ ${data.toolName}(${JSON.stringify(data.args)})"))
+}
+
+callback("onToolCallEnd") as data {
+  if (data.result is success(_result)) {
+    print(color.dim.green("${JSON.stringify(_result)}"))
+  } else if (data.result is failure(_error)) {
+    print(color.red(" ⎿  Error: ${_error}"))
+  } else {
+    print(color.dim("${JSON.stringify(data.result)}"))
+  }
+}
+
+node main() {
+  const prompt = "You are a general purpose agent. Help the user with their task."
+  systemMessage(prompt)
+  const message = input("> ")
+  handle {
+    const result = llm(message, {
+      tools: [codingAgent, wikipediaAgent]
+    })
+  } with approve
+  print(result)
+}
