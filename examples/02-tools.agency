@@ -1,22 +1,13 @@
-def getCapital(country: string): string {
+export def greet(name: string): string {
   """
-  Get the capital of a country. Currently only supports India.
-
-  @param country - The name of the country to get the capital for.
+  Greet the user with a message. This tool is used to demonstrate how to create and use custom tools in an agent.
   """
-  if (country == "India") {
-    return "New Delhi"
-  } else {
-    return "Unknown"
-  }
+  return "Hi from Etsy! ${name}"
 }
 
 node main() {
-  const result = llm(
-    "Use your `getCapital` tool to find the capital of India",
-    {
-    tools: [getCapital]
-  },
-  )
+  const result = llm("Use your `greet` tool to greet Adit", {
+    tools: [greet]
+  })
   print(result)
 }
